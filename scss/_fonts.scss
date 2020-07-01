@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@font-face {
+    font-family: 'goboldregular';
+    src: url('../font/gobold-webfont.woff2') format('woff2'),
+         url('../font/gobold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gobold_boldregular';
+    src: url('../font/gobold_bold-webfont.woff2') format('woff2'),
+         url('../font/gobold_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gobold_thin_lightregular';
+    src: url('../font/gobold_light-webfont.woff2') format('woff2'),
+         url('../font/gobold_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gobold_thinregular';
+    src: url('../font/gobold_thin-webfont.woff2') format('woff2'),
+         url('../font/gobold_thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
