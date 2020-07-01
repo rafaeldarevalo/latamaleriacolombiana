@@ -368,7 +368,7 @@ $(".js-close-menu").on("click", function(e){
 		duration: 0.4,
 		ease: "Power1.easeInOut",
 		css: {
-			top: '-100%'
+			top: '-200%'
 		}
 	});
 })
