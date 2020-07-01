@@ -388,7 +388,7 @@ gsap.to(".js-anatomy", {
 	duration: 0.4,
 	ease: "Power1.easeInOut",
 	css: {
-		top: '-100%'
+		top: '-200%'
 	}
 });
 })
