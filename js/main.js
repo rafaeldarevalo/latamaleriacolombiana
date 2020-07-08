@@ -562,7 +562,7 @@ gsap.to(".js-anatomy", {
 	})
 	setTimeout(function () {
 		close();
-	}, 15000)
+	}, 8000)
 
 
 	$(".js-open-tamal").hover(
@@ -607,16 +607,20 @@ gsap.to(".js-anatomy", {
 	});
 	let markerMiami = L.marker([25.7751, -80.2105], {
 		icon: iconMarker
-	}).addTo(map);
+	}).addTo(map).bindPopup('<a href="https://www.google.com/maps/place/Element+New+York+Times+Square+West/@40.755841,-73.993978,17z/data=!3m1!4b1!4m8!3m7!1s0x89c259acd8960709:0xffb304788e355070!5m2!4m1!1i2!8m2!3d40.755841!4d-73.991784" target="_blank">Indicaciones</a>').openPopup();
 	let markerNewJersey = L.marker([40.7281609, -74.0776367], {
 		icon: iconMarker
-	}).addTo(map);
+	}).addTo(map).bindPopup('<a href="https://www.google.com/maps/place/Element+New+York+Times+Square+West/@40.755841,-73.993978,17z/data=!3m1!4b1!4m8!3m7!1s0x89c259acd8960709:0xffb304788e355070!5m2!4m1!1i2!8m2!3d40.755841!4d-73.991784" target="_blank">Indicaciones</a>').openPopup();
 	let markerNewYork = L.marker([40.6643, -73.9385], {
 		icon: iconMarker
-	}).addTo(map);
+	}).addTo(map).bindPopup('<a href="https://www.google.com/maps/place/Element+New+York+Times+Square+West/@40.755841,-73.993978,17z/data=!3m1!4b1!4m8!3m7!1s0x89c259acd8960709:0xffb304788e355070!5m2!4m1!1i2!8m2!3d40.755841!4d-73.991784" target="_blank">Indicaciones</a>').openPopup();
+	
+
+	
 
 
 	$(".js-newyork").hover(
+		
 		function () {
 			map.flyTo([40.6643, -73.9385], 12, {
 				pan: {
@@ -648,7 +652,15 @@ gsap.to(".js-anatomy", {
 		}
 	);
 
-
+	function mapInit () {
+		map.flyTo([40.6643, -73.9385], 12, {
+			pan: {
+				animate: true,
+				duration: 200
+			}
+		});
+	}
+	mapInit();
 
 
 
@@ -657,7 +669,7 @@ gsap.to(".js-anatomy", {
 /* ------------------------------- END JQUERY ------------------------------- */
 
 bodymovin.loadAnimation({
-	container: document.querySelector('.js-order'), // Required
+	container: document.querySelector('.js-delivery'), // Required
 	path: 'data/data.json', // Required
 	renderer: 'svg', // Required
 	loop: true, // Optional

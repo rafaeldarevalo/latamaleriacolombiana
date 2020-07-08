@@ -203,7 +203,7 @@ html {
         left: 20%;
 
         @media #{$xs} {
-            width: 80vw;
+            width: 60vw;
             left: 40px;
             top: 35vh;
             z-index: 1;
@@ -668,6 +668,28 @@ h4 {
 
 }
 
+
+.leaflet-popup{
+    margin-bottom: 110px;
+}
+.leaflet-container a.leaflet-popup-close-button{
+    color: #fff;
+}
+.leaflet-popup-content-wrapper{
+    text-align: center;
+    background: #1974E9;
+    border-radius: 8px;
+    a{
+        color: #fff !important;
+        font-size: 1.4em !important;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+}
+.leaflet-popup-tip{
+    background: #1974E9 !important;
+
+}
 /* ---------------------------------- CONTACT --------------------------------- */
 
 .contact {
