@@ -669,7 +669,6 @@ gsap.to(".js-anatomy", {
 /* ------------------------------- END JQUERY ------------------------------- */
 
 bodymovin.loadAnimation({
-	
 	container: document.querySelector('.js-delivery'), // Required
 	path: 'data/data.json', // Required
 	renderer: 'svg', // Required
