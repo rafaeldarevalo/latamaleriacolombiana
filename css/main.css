@@ -467,7 +467,9 @@ h4 {
 .place {
   background: #e2e2e2;
   padding: 200px 0 0 0;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  z-index: 1; }
   @media (max-width: 575.98px) {
     .place {
       padding: 50px 0 0 0; } }
