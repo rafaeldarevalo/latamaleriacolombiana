@@ -90,6 +90,7 @@ html {
   top: 0;
   z-index: 9999;
   display: none;
+  z-index: 99999;
 
   @media #{$lg}{
     display: none;
@@ -107,7 +108,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 9999;
   height: 100px;
   text-align: center;
 
@@ -410,7 +411,8 @@ html {
   z-index: 99999;
 
   @media #{$xs} {
-    right: 20px;
+    right: 44px;
+    bottom: 50px;
   }
 
   .wt0 {
@@ -1369,7 +1371,7 @@ h4 {
   background: rgb(226, 226, 226);
   padding-top: 50px;
   @media #{$xs}{
-    height: 300px;
+    height: 340px;
   }
 
   p {
@@ -1390,16 +1392,19 @@ h4 {
     margin: 0;
     padding: 0;
     position: absolute;
-    right: 120px;
+    right: 200px;
     bottom: 20px;
     @media #{$xs}{
       left: 20px;
-      bottom: 20px;
+      bottom: 50px;
+      width: 100%;
     }
 
     li {
       list-style: none;
       width: 60px;
+      float: left;
+      margin-right: 20px;
     }
   }
 }

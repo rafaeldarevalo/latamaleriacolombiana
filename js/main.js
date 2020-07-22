@@ -182,15 +182,20 @@ $(document).ready(function () {
     /* -------------------------------- FAST MENU ------------------------------- */
 
     function icon() {
-        var tl = gsap.timeline();
-        tl.from(".js-icon", {
-            opacity: 0,
-            scale: 0,
-            stagger: 0.2,
-            duration: 0.4,
-            ease: "back"
-        }, 0.6);
-        return tl;
+        var windowWidth = $(window).width();
+
+        if (windowWidth > 575.98) {
+
+            var tl = gsap.timeline();
+            tl.from(".js-icon", {
+                opacity: 0,
+                scale: 0,
+                stagger: 0.2,
+                duration: 0.4,
+                ease: "back"
+            }, 0.6);
+            return tl;
+        }
     }
 
     $(".js-icon").hover(

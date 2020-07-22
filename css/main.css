@@ -95,7 +95,8 @@ html {
   left: 0;
   top: 0;
   z-index: 9999;
-  display: none; }
+  display: none;
+  z-index: 99999; }
   @media (min-width: 992px) {
     .nav-icon-close {
       display: none; } }
@@ -110,7 +111,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 9999;
   height: 100px;
   text-align: center; }
   @media (max-width: 575.98px) {
@@ -325,7 +326,8 @@ html {
   z-index: 99999; }
   @media (max-width: 575.98px) {
     .whatsapp {
-      right: 20px; } }
+      right: 44px;
+      bottom: 50px; } }
   .whatsapp .wt0 {
     fill: #0DC143; }
   .whatsapp .wt1 {
@@ -1001,7 +1003,7 @@ h4 {
   padding-top: 50px; }
   @media (max-width: 575.98px) {
     .footer {
-      height: 300px; } }
+      height: 340px; } }
   .footer p {
     margin-bottom: 0;
     font-weight: bold; }
@@ -1016,15 +1018,18 @@ h4 {
     margin: 0;
     padding: 0;
     position: absolute;
-    right: 120px;
+    right: 200px;
     bottom: 20px; }
     @media (max-width: 575.98px) {
       .footer ul {
         left: 20px;
-        bottom: 20px; } }
+        bottom: 50px;
+        width: 100%; } }
     .footer ul li {
       list-style: none;
-      width: 60px; }
+      width: 60px;
+      float: left;
+      margin-right: 20px; }
 
 .modal-team {
   position: fixed;
