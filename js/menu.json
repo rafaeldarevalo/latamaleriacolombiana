@@ -1,0 +1,119 @@
+[
+  {
+    "title": "TAMAL COLOMBIANO 100% TOLIMENSE ",
+    "image": "tamal",
+    "description": "El TAMAL TOLIMENSE  es un producto autóctono  de la región del Tolima, se fabrica  con la receta original  de la región y lo mejor es que las HOJAS DE PLATANO son IMPORTADAS de COLOMBIA por ellos el sabor tan auténtico que hace de el un producto de alta calidad.",
+    "includes": "Pollo<br>Costilla de cerdO<br>Tocino<br>Zanahoria<br>Papa\n",
+    "copy": "Complementado con la deliciosa masa de arroz con arverja amarilla<br>LAS HOJAS SON DE PLATANO TRAIDO DE CUNDINAMARCA COLOMBIA",
+    "price": "$10.00",
+    "link": "comprar%20tamal%20tolimense20%por%20unidad."
+
+  },
+  {
+    "title": "COMBO COMPLETO CON TAMAL TOLIMENSE ",
+    "image": "combo1",
+    "description": "",
+    "includes": "Tamal Tolimense<br>Jugo de Naranja<br>Croissant<br>Chocolate o cafe",
+    "copy": "Todo va caliente y fresco.<br>Todo va empacado en su bolsa personal.",
+    "price": "$15.00",
+    "link": "comprar%20combo%20completo%20con%20tamal%20tolimense."
+  },
+  {
+    "title": "LECHONA TOLIMENSE<br>15 PLATOS",
+    "image": "lechona",
+    "description": "Un Cojin de lechona  es un cuero cosido en 2 partes donde se rellena de Arroz, arverja amarilla y solo Pernil de cero de primera calidad, se sella y hornea durante 7 horas hasta queda supremamente crujiente.",
+    "includes": "Todos los Cojines llevan incluidas las arepas y se vende en dos presentaciones:<br><br>ORDENA 3 DIAS ANTES.",
+    "copy": "Cojin 15 PLATOS",
+    "price": "$150",
+    "link": "comprar%20cogín%20de%2015%20platos%20de%20lechona%20tolimense."
+  },{
+    "title": "LECHONA TOLIMENSE<br>25 PLATOS",
+    "image": "lechona",
+    "description": "Un Cojin de lechona  es un cuero cosido en 2 partes donde se rellena de Arroz, arverja amarilla y solo Pernil de cero de primera calidad, se sella y hornea durante 7 horas hasta queda supremamente crujiente.",
+    "includes": "Todos los Cojines llevan incluidas las arepas y se vende en dos presentaciones:<br><br>ORDENA 3 DIAS ANTES.",
+    "copy": "",
+    "price": "$260",
+    "link": "comprar%20cogín%20de%2025%20platos%20de%20lechona%20tolimense."
+  },
+  {
+    "title": "AGUA DE PANELA CON QUESO",
+    "image": "aguadepanela",
+    "description": "Deliciosa  Agua con panela Colombiana\uD83C\uDDE8\uD83C\uDDF4 bebida  dulce y caliente, acompañada de u a porción de Queso Doble crema para vivir sentír el sabor de la tierra",
+    "includes": "Deliciosa bebida caliente.",
+    "copy": "",
+    "price": "$6.00",
+    "link": "comprar%20agua%20de%20panela%20con%20queso."
+  },
+  {
+    "title": "ENVUELTOS DE<br>MAIZ / CHOCLO",
+    "image": "envueltos",
+    "description": "Envueltos de maiz / Choclo con relleno de solo Queso o con Queso y bocadillo.<br>TAMBIÉN  LLAMADOS HUMITAS  en otras regiones de SURAMERICA\n",
+    "includes": "Envueltos de Maiz / Choclo",
+    "copy": "Todo va caliente y fresco.",
+    "price": "$3.00",
+    "link": "comprar%20emvueltos%20de%20maiz%20/%20Chocolo."
+  },
+  {
+    "title": "SODA MANZANA POSTOBON",
+    "image": "menu_manzana",
+    "description": "",
+    "includes": "Refrescante bebida fría.",
+    "copy": "",
+    "price": "$2.00",
+    "link": "comprar%20lata%20de%20manzana%20/%20Postobón."
+  },
+  {
+    "title": "SODA COLOMBIANA POSTOBON",
+    "image": "menu_colombiana",
+    "description": "",
+    "includes": "Refrescante bebida fría.",
+    "copy": "",
+    "price": "$2.00",
+    "link": "comprar%20lata%20de%20colombiana%20/%20Postobón."
+  },
+  {
+  "title": "PONY MALTA",
+  "image": "menu_pony",
+  "description": "",
+  "includes": "Refrescante bebida fría.",
+  "copy": "",
+  "price": "$3.00",
+  "link": "comprar%20Pony Malta."
+  },
+  {
+  "title": "CHOCOLATE CASERO de Moninillo",
+  "image": "menu_chocolate",
+  "description": "",
+  "includes": "Deliciosa bebida caliente.",
+  "copy": "",
+  "price": "$2.00",
+  "link": "comprar%20chocolate%20casero."
+  },
+  {
+  "title": "Café con leche",
+  "image": "cafe",
+  "description": "Café colombiano  con leche entera.<br>Acompáñalo con tu orden.",
+  "includes": "Deliciosa bebida caliente.",
+  "copy": "",
+  "price": "$2.00",
+  "link": "comprar%20café%20con%20leche."
+  },
+  {
+  "title": "PRUEBA NUESTROS DELICIOSOS POSTRES",
+  "image": "combo1",
+  "description": "Acompáñalo con tu orden.",
+  "includes": "Delicioso postre.",
+  "copy": "",
+  "price": "$4.00",
+  "link": "comprar%20Postres."
+  },
+  {
+  "title": "CHOCOLEATE  MOUSSE",
+  "image": "combo1",
+  "description": "La mousse de chocolate es un postre original de la cocina francesa, ahora conocido internacionalmente.<br><br>Consiste en una crema suave y  un cake perfecto para cualquier  ocasión.",
+  "includes": "Fresco Chocolate Mousse.",
+  "copy": "",
+  "price": "$4.00",
+  "link": "comprar%20hocolate Mousse."
+  }
+]

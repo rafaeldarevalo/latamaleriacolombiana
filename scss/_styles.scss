@@ -1,159 +1,182 @@
 a {
-    color: $secondaryFocus;
-    text-decoration: none !important;
-
-    &:hover {
-        color: initial;
-    }
+  color: $secondaryFocus;
+  text-decoration: none !important;
+  &:hover {
+    color: initial;
+  }
 }
 
 img {
-    width: auto;
+  width: auto;
 }
 
 p {
-    margin-bottom: 30px;
-    font-size: 1.4em;
+  margin-bottom: 30px;
+  font-size: 1.4em;
 }
-
 body,
 html {
+  font-size: 15px;
+  background: #111;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
 
-    font-size: 15px;
-    background: #111;
-
-    font-family: 'Raleway', sans-serif;
-
-    height: 100%;
-    width: 100%;
-    overflow: visible;
 
 }
+.usa {
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+  right: 0;
+  overflow: hidden;
+  width: 75px;
+  img {
 
-.usa{
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    right: 0;
-    overflow: hidden;
-    width: 100px;
-    img{
-      
     width: 100%;
-   
-    }
+
+  }
 }
 
 /* ---------------------------- HEADER NAVIGATION --------------------------- */
-
-.logo {
-    position: fixed;
-    width: 20vw;
-    top: 50px;
-    left: 10px;
-    z-index: 5000;
-
-    @media #{$xs} {
-        width: 60%;
-        top: -30px;
-        left: 0;
-        margin-left: 20%;
-    }
+.head-xs{
+  background: #000;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-.nav-icon{
-    width: 100%;
-    position: fixed;
+.logo {
+  position: fixed;
+  width: 20vw;
+  top: 50px;
+  left: 10px;
+  z-index: 6000;
+
+  @media #{$xs} {
+    width: 60%;
+    top: -30px;
     left: 0;
-    top: 0;
-    z-index: 1100;
-    height: 140px;
-    background: #111;
-     @media #{$xs}{
-        //  display: none;
-     }
-    img{
-        width: 36px;
-        top: 56px;
+    margin-left: 20%;
+  }
+}
+
+.nav-icon {
+  width: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+
+  @media #{$lg}{
+    display: none;
+  }
+
+  img {
+    width: 36px;
+    top: 22px;
     left: 20px;
     position: absolute;
-    }
+  }
 }
 
+.nav-icon-close {
+  width: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  display: none;
+
+  @media #{$lg}{
+    display: none;
+  }
+
+  img {
+    width: 36px;
+    top: 22px;
+    left: 20px;
+    position: absolute;
+  }
+}
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2000;
-    height: 100px;
-    text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  height: 100px;
+  text-align: center;
+
+  @media #{$xs} {
+    height: 100%;
+    background: #111;
+    left: -100%;
+  }
+
+  .nav {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    margin: 0 auto;
 
     @media #{$xs} {
-        height: 100%;
-        background: #111;
-        left: -100%;
+      margin-top: 200px;
+
     }
 
-    .nav {
-        display: inline-grid;
-        margin: 0 auto;
-        grid-template-columns: repeat(6, auto);
+    a {
+      color: $mainBrandColor;
+      display: inline-block;
+      width: auto;
+      height: 100px;
+      line-height: 100px;
+      padding: 0 30px;
+      font-family: 'gobold_thinregular';
+      text-transform: uppercase;
+      position: relative;
+      text-align: center;
+      margin: auto;
 
+      @media #{$xs} {
+        line-height: 2em;
+        height: auto;
+        font-size: 1.8em;
+        width: 100%;
 
-        width: auto;
-        margin: 0 auto;
+      }
+
+      &::after {
+
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: $Highlight;
+        transition: all 200ms;
 
         @media #{$xs} {
-            grid-template-columns: repeat(1, 1fr);
-            margin-top: 200px;
+          display: none;
 
         }
+      }
 
-        a {
-            color: $mainBrandColor;
-            width: 100%;
-            padding: 0 30px;
-            font-family: 'gobold_thinregular';
-            text-transform: uppercase;
-            position: relative;
-            line-height: 100px;
-            text-align: center;
-            margin: auto;
-
-            @media #{$xs} {
-                line-height: 2em;
-                font-size: 1.8em;
-
-            }
-
-            &::after {
-
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                width: 0;
-                height: 2px;
-                background: $Highlight;
-                transition: all 200ms;
-
-                @media #{$xs} {
-                    display: none;
-
-                }
-            }
-
-            &.active,
-            &:hover {
-                &::after {
-                    width: 100%;
-                    transform: translate(-50%, 0);
-                    transition: all 200ms;
-                }
-
-            }
+      &.active,
+      &:hover {
+        &::after {
+          width: 100%;
+          transform: translate(-50%, 0);
+          transition: all 200ms;
         }
+
+      }
     }
+  }
 
 }
 
@@ -161,308 +184,1054 @@ html {
 
 
 .banner {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
 
 
+  .bg {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
 
-    .bg {
-        position: absolute;
-        top: -20px;
-        left: 0;
-        width: 100%;
-
-        @media #{$xs} {
-            width: 300vw;
-            margin-left: -150vw;
-        }
-
+    @media #{$xs} {
+      width: 300vw;
+      margin-left: -150vw;
     }
 
-    .bg-base {
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
+  }
 
-        @media #{$xs} {
-            width: 300vw;
-            margin-left: -100vw;
+  .bg-base {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
 
-        }
-    }
-
-    .tamales-colombianos {
-        width: 25vw;
-        position: absolute;
-        top: 50vh;
-        left: 20%;
-
-        @media #{$xs} {
-            width: 60vw;
-            left: 40px;
-            top: 35vh;
-            z-index: 1;
-        }
+    @media #{$xs} {
+      width: 300vw;
+      margin-left: -100vw;
 
     }
+  }
 
-    .logo-tamales-colombianos {
-        width: 100%;
+  .tamales-colombianos {
+    width: 25vw;
+    position: absolute;
+    top: 50vh;
+    left: 20%;
+
+    @media #{$xs} {
+      width: 60vw;
+      left: 40px;
+      top: 35vh;
+      z-index: 1;
     }
 
-    .arrow-home {
-        position: absolute;
-        bottom: -140px;
-        right: 0;
-        width: 40%;
+  }
 
-        .arrow {
-            fill: $mainBrandColor;
-        }
+  .logo-tamales-colombianos {
+    width: 100%;
+  }
 
-        @media #{$xs} {
-            left: 50px;
-            transform: rotate(40deg);
-            bottom: -150px;
-        }
+  .arrow-home {
+    position: absolute;
+    bottom: -140px;
+    right: 0;
+    width: 40%;
+
+    .arrow {
+      fill: $mainBrandColor;
     }
 
-    .tamal {
-        position: absolute;
-        right: 12vw;
-        bottom: 0;
-        width: 40vw;
+    @media #{$xs} {
+      left: 50px;
+      transform: rotate(40deg);
+      bottom: -150px;
+    }
+  }
 
-        @media #{$xs} {
-            right: -50vw;
-            bottom: 50px;
-            width: 100vw;
-            z-index: 2;
-        }
+  .tamal {
+    position: absolute;
+    right: 12vw;
+    bottom: 0;
+    width: 40vw;
+
+    @media #{$xs} {
+      right: -50vw;
+      bottom: 50px;
+      width: 100vw;
+      z-index: 2;
+    }
+  }
+
+  .open-tamal {
+    width: 120px;
+    height: 120px;;
+    position: absolute;
+    left: 50%;
+    bottom: 140px;
+    margin-left: -60px;
+    cursor: pointer;
+    z-index: 500;
+
+    @media #{$xs} {
+      width: 30vw;
+      left: 50%;
+      margin-left: -15vw;
+      bottom: 60px;
     }
 
-    .open-tamal {
-        width: 120px;
-        height: 120px;
-        ;
-        position: absolute;
-        left: 50%;
-        bottom: 140px;
-        margin-left: -60px;
-        cursor: pointer;
-        z-index: 500;
+    svg {
+      fill: $mainBrandColor;
+      transition: ease-in-out 300ms;
 
-        @media #{$xs} {
-            width: 30vw;
-            left: 50%;
-            margin-left: -15vw;
-            bottom: 60px;
-        }
+      &:hover {
 
-        svg {
-            fill: $mainBrandColor;
-            transition: ease-in-out 300ms;
+        fill: $Highlight;
+        transition: ease-in-out 300ms;
 
-            &:hover {
+      }
 
-                fill: $Highlight;
-                transition: ease-in-out 300ms;
+      .icon {
 
-            }
-
-            .icon {
-
-                animation: rotation 12s infinite linear;
-                transform-origin: 50% 50%;
-                display: inline-block;
-                /* <--- */
-            }
-        }
-
-        @keyframes rotation {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
+        animation: rotation 12s infinite linear;
+        transform-origin: 50% 50%;
+        display: inline-block;
+        /* <--- */
+      }
     }
 
-    .tamal-go-lg {
-        display: none;
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
-    .tamal-go-xs {
-        width: 100%;
-    }
+  }
+
+  .tamal-go-lg {
+    display: none;
+  }
+
+  .tamal-go-xs {
+    width: 100%;
+  }
 
 }
 
 /* --------------------------------- SLIDER --------------------------------- */
 
 
-
-
-
-
-
 .carousel-indicators li {
-    box-sizing: content-box;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    width: 14px;
-    height: 14px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #fff;
-    background-clip: padding-box;
-    border-top: initial;
-    border-bottom: initial;
-    opacity: .5;
-    transition: opacity .6s ease;
-    border-radius: 50px !important;
+  box-sizing: content-box;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-top: initial;
+  border-bottom: initial;
+  opacity: .5;
+  transition: opacity .6s ease;
+  border-radius: 50px !important;
 
-    &.active {
-        background: $Highlight;
-    }
+  &.active {
+    background: $Highlight;
+  }
 }
 
 .reset-overflow {
-    overflow: initial !important;
+  overflow: initial !important;
 }
 
 .fast-nav {
-    width: 80vw;
-    left: 10vw;
-    position: absolute;
-    top: 40vh;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    text-align: center;
+  width: 80vw;
+  left: 10vw;
+  position: absolute;
+  top: 40vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  text-align: center;
+
+  @media #{$xs} {
+    grid-template-columns: 50% 50%;
+    top: 30vh;
+  }
+
+  a {
+    padding: 30px;
+    display: block;
 
     @media #{$xs} {
-        grid-template-columns: 50% 50%;
-        top: 30vh;
+      padding: 10px;
     }
 
-    a {
-        padding: 30px;
-        display: block;
-
-        @media #{$xs} {
-            padding: 10px;
-        }
-
-        img {
-            width: 80%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        p {
-            font-size: 1.4em;
-            color: $mainBrandColor;
-            width: 100%;
-            text-align: center;
-            font-family: $titleFont;
-            text-transform: uppercase;
-
-            @media #{$xs} {
-                font-size: 1.2em;
-            }
-
-        }
+    img {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
     }
+
+    p {
+      font-size: 1.4em;
+      color: $mainBrandColor;
+      width: 100%;
+      text-align: center;
+      font-family: $titleFont;
+      text-transform: uppercase;
+
+      @media #{$xs} {
+        font-size: 1.2em;
+      }
+
+    }
+  }
 }
 
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    z-index: 99999;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  z-index: 99999;
 
-    @media #{$xs} {
-        right: 20px;
-    }
+  @media #{$xs} {
+    right: 20px;
+  }
 
-    .wt0 {
-        fill: #0DC143
-    }
+  .wt0 {
+    fill: #0DC143
+  }
 
-    .wt1 {
-        fill: #ffffff
-    }
+  .wt1 {
+    fill: #ffffff
+  }
 
-    .whataspp-icon {
-        width: 100%;
-    }
+  .whataspp-icon {
+    width: 100%;
+  }
 }
 
 .tooltip-whatsapp {
 
-    width: 360px;
-    background: #fff;
+  width: 360px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  padding: 10px;
+  border-radius: 12px;
+
+  @media #{$xs} {
+    width: 90vw;
+  }
+
+
+  .tooltip-arrow {
     position: absolute;
-    right: 0;
-    bottom: 80px;
-    padding: 10px;
-    border-radius: 12px;
+    right: 60px;
+    bottom: -60px;
+    width: 60px;
+  }
+
+  p {
+    color: $secondaryFocus;
+    font-size: 1em;
+    margin-bottom: 0;
 
     @media #{$xs} {
-        width: 90vw;
+      padding-right: 40px;
     }
 
+  }
 
+  h2 {
+    font-size: 1.2em;
+    font-family: 'gobold_boldregular';
+    margin: 20px 0 10px 0;
+  }
 
-    .tooltip-arrow {
-        position: absolute;
-        right: 60px;
-        bottom: -60px;
-        width: 60px;
-    }
-
-    p {
-        color: $secondaryFocus;
-        font-size: 1em;
-        margin-bottom: 0;
-
-        @media #{$xs} {
-            padding-right: 40px;
-        }
-
-    }
-
-    h2 {
-        font-size: 1.2em;
-        font-family: 'gobold_boldregular';
-        margin: 20px 0 10px 0;
-    }
-
-    a {
-        width: 100%;
-        display: block;
-        display: grid;
-        grid-template-columns: 25% 75%;
-        grid-gap: 20px;
-    }
+  a {
+    width: 100%;
+    display: block;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap: 20px;
+  }
 
 }
 
 
 .close {
-    width: 40px;
+  width: 40px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  cursor: pointer;
+
+  path {
+    fill: $secondaryFocus;
+  }
+}
+
+/* ---------------------------------- MENU ---------------------------------- */
+
+.menu {
+  text-align: center;
+  background: url("../img/bg_menu.jpg") center top;
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+
+  @media #{$xs} {
+    padding: 50px 30px;
+  }
+
+  section {
+    text-align: right;
+    width: 80vw;
+    margin-left: 20vw;
+    position: relative;
+    padding-top: 100px;
+
+    @media #{$xs} {
+      margin-left: 0;
+      width: 100%;
+    }
+
+
+    img {
+      width: 80%;
+
+      @media #{$xs} {
+        width: 150%;
+      }
+    }
+  }
+
+  span {
+    @media #{$xs} {
+      width: 100%;
+    }
+  }
+
+  img.title-menu {
+    width: 300px;
+
+    @media #{$xs} {
+      width: 80%;
+    }
+  }
+
+  .menu-envueltos {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 100;
+    width: 45%;
+
+    @media #{$xs} {
+      width: 80%;
+      transform: rotate(30deg);
+      top: -19px;
+      left: 0;
+    }
+  }
+
+  .btn-white {
+    margin-top: 30px;
+  }
+
+}
+
+.btn-white {
+  padding: 10px 60px;
+  color: $Highlight;
+  border: 1px solid $Highlight;
+
+  display: inline-block;
+  font-family: $titleFont;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  cursor: pointer;
+
+
+  &:hover {
+    border-color: $Highlight;
+    color: $Highlight
+  }
+}
+
+
+h2 {
+  font-size: 4em;
+  font-family: $titleFont;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+
+  @media #{$xs} {
+    margin-bottom: 50px;
+    font-size: 2.8em;
+  }
+}
+
+h3 {
+  font-size: 2.4em;
+  font-family: $titleFont;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+/* ---------------------------------- PLACE --------------------------------- */
+
+.place {
+  background: rgb(226, 226, 226);
+  padding: 200px 0 0 0;
+  text-align: center;
+
+  @media #{$xs} {
+    padding: 50px 0 0 0;
+  }
+
+
+  section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin: 0 auto;
+    z-index: 1;
+
+    @media #{$xs} {
+
+
+      h3 {
+        font-size: 1.6em;
+        height: 60px;
+      }
+
+      h4 {
+        font-size: 1em;
+      }
+
+      p {
+        font-size: 0.75em;
+      }
+      a {
+        display: none;
+      }
+
+    }
+
+
+
+
+
+    .item {
+      position: relative;
+      padding-bottom: 50px;
+      z-index: 1000;
+      cursor: pointer;
+
+      @media #{$xs} {
+        padding-bottom: 0;
+      }
+
+    }
+
+  }
+  .active {
+    background: #000;
+    color: $mainBrandColor;
+    cursor: pointer;
+    transition: all 0.2s !important;
+
+    h3 {
+
+      color: $Highlight;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+  }
+
+
+  .indications {
+    padding: 10px 30px;
+    background: #1974E9;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.4em;
+
+    @media #{$xs} {
+      font-size: 1em;
+    }
+  }
+
+  #mapid {
+    height: 60vh;
+    width: 100%;
+  }
+
+}
+
+
+.leaflet-popup {
+  margin-bottom: 110px;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #fff;
+}
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+  background: #1974E9;
+  border-radius: 8px;
+
+  a {
+    color: #fff !important;
+    font-size: 1.4em !important;
+    font-family: 'Raleway', sans-serif;
+  }
+
+}
+
+.leaflet-popup-tip {
+  background: #1974E9 !important;
+
+}
+
+/* ---------------------------------- CONTACT --------------------------------- */
+
+.contact {
+  text-align: center;
+  background: url("../img/bg_menu.jpg") center top;
+  background-size: cover;
+  // background: rgb(255, 243, 211);
+  padding: 200px 0;
+  position: relative;
+  color: #fff;
+
+  @media #{$xs} {
+    padding: 50px 30px;
+  }
+
+  section {
+    width: 60%;
+    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+
+    @media #{$xs} {
+      width: 100%;
+      margin-left: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 30px;
+
+      img {
+        width: 100%;
+        margin: 0 auto;
+        @media #{$xs} {
+          transform: scale(1.4);
+        }
+      }
+    }
+
+    h2 {
+      font-family: 'gobold_thin_lightregular';
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+      @media #{$xs} {
+        font-size: 2em;
+      }
+
+    }
+
+    span {
+
+      color: $Highlight;
+      font-size: 70px;
+      font-family: $titleFont;
+
+      @media #{$xs} {
+        font-size: 3em;
+      }
+    }
+  }
+
+  .delivery {
+    margin-top: 100px;
+    padding-left: 30px;
+
+    @media #{$xs} {
+      padding-left: 0;
+
+      a {
+        width: 100%;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
+}
+
+
+/* ---------------------------------- ABOUT --------------------------------- */
+.about {
+  text-align: center;
+  background: rgb(226, 226, 226);
+  // background: rgb(255, 243, 211);
+  padding: 200px 0 0 0;
+  position: relative;
+
+  @media #{$xs} {
+    padding: 50px 0 0 0;
+  }
+
+  section {
+    width: 60%;
+    margin-left: 20%;
+
+    h2 {
+      font-size: 50px;
+
+      font-family: 'gobold_thin_lightregular';
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+    }
+
+    p {
+
+      @media #{$xs}{
+        font-size: 1em;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+/* ---------------------------------- STEPS --------------------------------- */
+
+
+.anatomy {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: -3000px;
+  // top: 0;
+  left: 0;
+  background: rgba(1, 1, 1, 0.9);
+  z-index: 9998;
+
+
+  .anatomy-conten {
+    width: 60vw;
+    height: 80vh;
+    background: url('../img/steps_bg.jpg') center center;
+    background-size: cover;
+    margin: 30px 0 0 20vw;
+    border-radius: 20px;
+    border: 10px solid #111;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    @media #{$xs} {
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      margin: 0;
+    }
+
+    .anatomy-step {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      opacity: 0;
+      width: 60%;
+      margin-left: 20%;
+
+      @media #{$xs} {
+        top: 280px;
+        width: 100%;
+        margin-left: 0;
+      }
+
+
+    }
+
+    .anatomia-title {
+      width: 150px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: -75px;
+
+
+    }
+
+    .text-anatomy {
+      color: $mainBrandColor;
+      width: 50vw;
+      margin: 0 auto;
+      font-size: 0.75em;
+      padding-top: 80px;
+      @media #{$xs} {
+        width: 100%;
+        p {
+          font-size: 1.1em !important;
+        }
+      }
+    }
+  }
+
+  .ingredients {
+    position: absolute;
+    width: 720px;
+    top: 40px;
+    left: 50%;
+    margin-left: -360px;
+
+    @media #{$xs} {
+      width: 100%;
+      margin-left: 0;
+      left: 0;
+
+
+    }
+
+  }
+
+  .ingredient {
+    width: 80px;
+    position: absolute;
+
+    @media #{$xs} {
+      width: 20%;
+    }
+
+  }
+
+  .ingredient-1 {
+    left: 0;
+    top: 330px;
+
+    @media #{$xs} {
+      top: 180px;
+      left: 5%;
+    }
+  }
+
+  .ingredient-2 {
+    left: 80px;
+    top: 230px;
+
+    @media #{$xs} {
+      top: 155px;
+      left: 30%;
+    }
+  }
+
+  .ingredient-3 {
+    left: 160px;
+    top: 200px;
+
+    @media #{$xs} {
+      top: 155px;
+      left: 55%;
+    }
+  }
+
+  .ingredient-4 {
+    left: 240px;
+    top: 180px;
+
+    @media #{$xs} {
+      top: 180px;
+      left: 80%;
+    }
+  }
+
+  .ingredient-5 {
+    left: 320px;
+    top: 160px;
+
+    @media #{$xs} {
+      left: 0;
+      top: 510px;
+      width: 20%;
+    }
+  }
+
+  .ingredient-6 {
+    left: 400px;
+    top: 180px;
+
+    @media #{$xs} {
+      left: 20%;
+      top: 552px;
+      width: 20%;
+    }
+  }
+
+  .ingredient-7 {
+    left: 480px;
+    top: 200px;
+
+    @media #{$xs} {
+      left: 40%;
+      top: 580px;
+      width: 20%;
+    }
+  }
+
+  .ingredient-8 {
+    left: 560px;
+    top: 230px;
+
+    @media #{$xs} {
+      left: 60%;
+      top: 552px;
+      width: 20%;
+    }
+  }
+
+  .ingredient-9 {
+    left: 640px;
+    top: 330px;
+
+    @media #{$xs} {
+      left: 80%;
+      top: 510px;
+      width: 20%;
+    }
+  }
+
+  // arrows
+
+  .arrow-1 {
+    width: 25px;
+    position: absolute;
+    top: 396px;
+    left: 56px;
+    transform: rotate(-60deg);
+    transform-origin: top center;
+    z-index: 1000;
+
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(-45deg);
+      top: 243px;
+      left: 7%;
+    }
+  }
+
+  .arrow-2 {
+    width: 25px;
+    position: absolute;
+    top: 318px;
+    left: 117px;
+    transform: rotate(-40deg);
+    transform-origin: top center;
+    z-index: 1000;
+
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(-18deg);
+      top: 233px;
+      left: 38%;
+    }
+  }
+
+  .arrow-3 {
+    width: 25px;
+    position: absolute;
+    top: 282px;
+    left: 209px;
+    transform: rotate(-25deg);
+    transform-origin: top center;
+    z-index: 1000;
+
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(9deg);
+      top: 233px;
+      left: 62%;
+    }
+  }
+
+  .arrow-4 {
+    width: 25px;
+    position: absolute;
+    top: 259px;
+    left: 272px;
+    transform: rotate(-15deg);
+    transform-origin: top center;
+    z-index: 1000;
+
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(45deg);
+      top: 253px;
+      left: 83%;
+    }
+  }
+
+  .arrow-5 {
+    width: 25px;
+    position: absolute;
+    top: 252px;
+    left: 344px;
+    transform: rotate(0deg);
+    transform-origin: top center;
+    z-index: 1000;
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(-128deg);
+      top: 500px;
+      left: 9%;
+    }
+
+  }
+
+  .arrow-6 {
+    width: 25px;
+    position: absolute;
+    top: 260px;
+    left: 423px;
+    transform: rotate(14deg);
+    transform-origin: top center;
+    z-index: 1000;
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(-167deg);
+      top: 532px;
+      left: 28%;
+    }
+  }
+
+  .arrow-7 {
+    width: 25px;
+    position: absolute;
+    top: 287px;
+    left: 473px;
+    transform: rotate(24deg);
+    transform-origin: top center;
+    z-index: 1000;
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(-180deg);
+      top: 565px;
+      left: 49%;
+    }
+  }
+
+  .arrow-8 {
+    width: 25px;
+    position: absolute;
+    top: 322px;
+    left: 575px;
+    transform: rotate(60deg);
+    transform-origin: top center;
+    z-index: 1000;
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(-192deg);
+      top: 532px;
+      left: 67%;
+    }
+
+  }
+
+  .arrow-9 {
+    width: 25px;
+    position: absolute;
+    top: 415px;
+    left: 632px;
+    transform: rotate(78deg);
+    transform-origin: top center;
+    z-index: 1000;
+    @media #{$xs} {
+      width: 12px;
+      transform: rotate(154deg);
+      top: 500px;
+      left: 86%;
+    }
+  }
+}
+
+.close-anatomy {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 30px;
+  height: 30px;
+
+  path {
+    fill: #fff;
+  }
+
+}
+
+// MENU ALL
+
+.menu-all {
+  overflow-y: scroll;
+  position: fixed;
+  top: -150%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9998;
+  padding-top: 0;
+  text-align: center;
+  background: #000;
+
+  .close {
+    width: 60px;
     padding: 10px;
     position: absolute;
     top: 0;
@@ -471,870 +1240,198 @@ html {
     cursor: pointer;
 
     path {
-        fill: $secondaryFocus;
+      fill: $mainBrandColor;
     }
-}
+  }
 
-/* ---------------------------------- MENU ---------------------------------- */
+  .logo {
 
-.menu {
+    z-index: 1000;
+    // position: absolute;
+    // left: 50%;
+    // margin-left: -100px;
+  }
+
+  h3 {
+    color: $mainBrandColor;
     text-align: center;
-    background: url("../img/bg_menu.jpg") center top;
-    background-size: cover;
-    padding: 100px 0;
-    position: relative;
-    overflow: hidden;
-
-    @media #{$xs} {
-        padding: 50px 30px;
-    }
-
-    section {
-        text-align: right;
-        width: 80vw;
-        margin-left: 20vw;
-        position: relative;
-        padding-top: 100px;
-
-        @media #{$xs} {
-            margin-left: 0;
-            width: 100%;
-        }
+    margin: 50px 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
 
 
-        img {
-            width: 80%;
+  }
 
-            @media #{$xs} {
-                width: 150%;
-            }
-        }
-    }
-
-    span {
-        @media #{$xs} {
-            width: 100%;
-        }
-    }
-
-    img.title-menu {
-        width: 300px;
-
-        @media #{$xs} {
-            width: 80%;
-        }
-    }
-
-    .menu-envueltos {
-        position: absolute;
-        left: 50px;
-        top: 50px;
-        z-index: 100;
-        width: 45%;
-
-        @media #{$xs} {
-            width: 80%;
-            transform: rotate(30deg);
-            top: -19px;
-            left: 0;
-        }
-    }
-
-    .btn-white {
-        margin-top: 30px;
-    }
-
-}
-
-.btn-white {
-    padding: 10px 60px;
-    color: $Highlight;
-    border: 1px solid $Highlight;
-
-    display: inline-block;
+  h4 {
+    color: $mainBrandColor;
     font-family: $titleFont;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    cursor: pointer;
-
-
-    &:hover {
-        border-color: $Highlight;
-        color: $Highlight
-    }
-}
-
-
-
-h2 {
-    font-size: 4em;
-    font-family: $titleFont;
-    margin-bottom: 100px;
-    text-transform: uppercase;
-
-    @media #{$xs} {
-        margin-bottom: 50px;
-        font-size: 2.8em;
-    }
-}
-
-h3 {
     font-size: 2.4em;
-    font-family: $titleFont;
-    margin: 30px 0;
-    text-transform: uppercase;
-}
+  }
 
-h4 {
-    font-size: 1.4em;
-    font-weight: bold;
-    margin: 30px 0;
-}
-
-/* ---------------------------------- PLACE --------------------------------- */
-
-.place {
-    background: rgb(226, 226, 226);
-    padding: 200px 0 0 0;
-    text-align: center;
-
-    @media #{$xs} {
-        padding: 50px 0 0 0;
-    }
-
-
-
-    section {
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 0;
-        align-items: center;
-        margin: 0 auto;
-
-        @media #{$xs} {
-            grid-template-columns: 1fr;
-
-            h3 {
-                font-size: 2em;
-            }
-
-            h4 {
-                font-size: 1em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-        }
-
-
-        & div:hover {
-            background: #000;
-            color: $mainBrandColor;
-            cursor: pointer;
-            transition: all 0.2s !important;
-        }
-
-        & div:hover h3 {
-
-            color: $Highlight;
-        }
-
-        .item {
-            padding-bottom: 30px;
-
-        }
-
-    }
-
-    .indications {
-        padding: 10px 30px;
-        background: #1974E9;
-        color: #fff;
-        border-radius: 50px;
-        font-size: 1.4em;
-
-        @media #{$xs} {
-            font-size: 1em;
-        }
-    }
-
-    #mapid {
-        height: 60vh;
-        width: 100%;
-    }
-
-}
-
-
-.leaflet-popup{
-    margin-bottom: 110px;
-}
-.leaflet-container a.leaflet-popup-close-button{
-    color: #fff;
-}
-.leaflet-popup-content-wrapper{
-    text-align: center;
-    background: #1974E9;
-    border-radius: 8px;
-    a{
-        color: #fff !important;
-        font-size: 1.4em !important;
-        font-family: 'Raleway', sans-serif;
-    }
-    
-}
-.leaflet-popup-tip{
-    background: #1974E9 !important;
-
-}
-/* ---------------------------------- CONTACT --------------------------------- */
-
-.contact {
-    text-align: center;
-    background: url("../img/bg_menu.jpg") center top;
+  .menu-image {
+    background: url('../img/bg_table.jpg') center bottom;
     background-size: cover;
-    // background: rgb(255, 243, 211);
-    padding: 200px 0;
-    position: relative;
-    color: #fff;
-
+    padding-top: 30px;
+    margin-top: 240px;
     @media #{$xs} {
-        padding: 50px 30px;
+      margin-top: 160px;
     }
-
-    section {
-        width: 60%;
-        margin-left: 20%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        text-align: left;
-
-        @media #{$xs} {
-            width: 100%;
-            margin-left: 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            text-align: center;
-            padding: 30px;
-
-            img {
-                width: 100%;
-                margin: 0 auto;
-            }
-        }
-
-        h2 {
-            font-family: 'gobold_thin_lightregular';
-            text-transform: uppercase;
-            margin-bottom: 0;
-
-            @media #{$xs} {
-                font-size: 2em;
-            }
-
-        }
-
-        span {
-
-            color: $Highlight;
-            font-size: 70px;
-            font-family: $titleFont;
-
-            @media #{$xs} {
-                font-size: 3em;
-            }
-        }
-    }
-
-    .delivery {
-        margin-top: 10 0px;
-        padding-left: 30px;
-
-        @media #{$xs} {
-            padding-left: 0;
-
-            a {
-                width: 100%;
-            }
-            p{
-                font-size: 1em;
-            }
-        }
-    }
-
-}
+  }
 
 
-/* ---------------------------------- ABOUT --------------------------------- */
-.about {
-    text-align: center;
-    background: rgb(226, 226, 226);
-    // background: rgb(255, 243, 211);
-    padding: 200px 0 0 0;
-    position: relative;
-
-    @media #{$xs} {
-        padding: 50px 0 0 0;
-    }
-
-    section {
-        width: 60%;
-        margin-left: 20%;
-
-        h2 {
-            font-size: 50px;
-
-            font-family: 'gobold_thin_lightregular';
-            text-transform: uppercase;
-            margin-bottom: 0;
-
-        }
-
-        p {
-            margin-bottom: 100px;
-             @media #{$xs}{
-                 font-size: 1em;
-             }
-        }
-
-    }
+  .carousel-item {
 
     img {
-        width: 100%;
+      width: 50vw !important;
+      margin: 0 auto;
+      display: none;
+
+      @media #{$xs} {
+        width: 100% !important;
+      }
     }
 
+    .menu-description {
 
 
-}
+      padding: 0;
+      width: 60%;
+      margin: 0 auto 30px;
 
-/* ---------------------------------- STEPS --------------------------------- */
-
-
-.anatomy {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: -3000px;
-    // top: 0;
-    left: 0;
-    background: rgba(1, 1, 1, 0.7);
-    z-index: 9999;
-
-
-    .anatomy-conten {
-        width: 60vw;
-        height: 80vh;
-        background: url('../img/steps_bg.jpg') center center;
-        background-size: cover;
-        margin: 10vh 0 0 20vw;
-        border-radius: 20px;
-        border: 10px solid #111;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-
-        @media #{$xs} {
-            width: 100vw;
-            height: 100vh;
-            left: 0;
-            margin: 0;
-        }
-
-        .anatomy-step {
-            position: absolute;
-            top: 20%;
-            left: 0;
-            opacity: 0;
-            width: 60%;
-            margin-left: 20%;
-
-            @media #{$xs} {
-                top: 33%;
-                width: 100%;
-                margin-left: 0;
-            }
-
-
-        }
-
-        .anatomia-title {
-            width: 30%;
-        }
-    }
-
-    .ingredients {
-        position: absolute;
-        width: 720px;
-        top: 0;
-        left: 50%;
-        margin-left: -360px;
-
-        @media #{$xs} {
-            width: 100%;
-            margin-left: 0;
-            left: 0;
-
-            
-        }
-
-    }
-
-    .ingredient {
-        width: 80px;
-        position: absolute;
-
-        @media #{$xs} {
-            width: 20%;
-        }
-
-    }
-
-    .ingredient-1 {
-        left: 0;
-        top: 330px;
-
-        @media #{$xs} {
-            top: 180px;
-            left: 5%;
-        }
-    }
-
-    .ingredient-2 {
-        left: 80px;
-        top: 230px;
-
-        @media #{$xs} {
-            top: 155px;
-            left: 30%;
-        }
-    }
-
-    .ingredient-3 {
-        left: 160px;
-        top: 200px;
-
-        @media #{$xs} {
-            top: 155px;
-            left: 55%;
-        }
-    }
-
-    .ingredient-4 {
-        left: 240px;
-        top: 180px;
-
-        @media #{$xs} {
-            top: 180px;
-            left: 80%;
-        }
-    }
-
-    .ingredient-5 {
-        left: 320px;
-        top: 160px;
-
-        @media #{$xs} {
-            left: 0;
-            top: 510px;
-            width: 20%;
-        }
-    }
-
-    .ingredient-6 {
-        left: 400px;
-        top: 180px;
-
-        @media #{$xs} {
-            left: 20%;
-            top: 552px;
-            width: 20%;
-        }
-    }
-
-    .ingredient-7 {
-        left: 480px;
-        top: 200px;
-
-        @media #{$xs} {
-            left: 40%;
-            top: 580px;
-            width: 20%;
-        }
-    }
-
-    .ingredient-8 {
-        left: 560px;
-        top: 230px;
-
-        @media #{$xs} {
-            left: 60%;
-            top: 552px;
-            width: 20%;
-        }
-    }
-
-    .ingredient-9 {
-        left: 640px;
-        top: 330px;
-
-        @media #{$xs} {
-            left: 80%;
-            top: 510px;
-            width: 20%;
-        }
-    }
-
-    // arrows
-
-    .arrow-1 {
-        width: 25px;
-        position: absolute;
-        top: 396px;
-        left: 56px;
-        transform: rotate(-60deg);
-        transform-origin: top center;
-        z-index: 1000;
-
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(-45deg);
-            top: 243px;
-            left: 7%;
-        }
-    }
-
-    .arrow-2 {
-        width: 25px;
-        position: absolute;
-        top: 318px;
-        left: 117px;
-        transform: rotate(-40deg);
-        transform-origin: top center;
-        z-index: 1000;
-
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(-18deg);
-            top: 233px;
-            left: 38%;
-        }
-    }
-
-    .arrow-3 {
-        width: 25px;
-        position: absolute;
-        top: 282px;
-        left: 209px;
-        transform: rotate(-25deg);
-        transform-origin: top center;
-        z-index: 1000;
-
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(9deg);
-            top: 233px;
-            left: 62%;
-        }
-    }
-
-    .arrow-4 {
-        width: 25px;
-        position: absolute;
-        top: 259px;
-        left: 272px;
-        transform: rotate(-15deg);
-        transform-origin: top center;
-        z-index: 1000;
-
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(45deg);
-            top: 253px;
-            left: 83%;
-        }
-    }
-
-    .arrow-5 {
-        width: 25px;
-        position: absolute;
-        top: 252px;
-        left: 344px;
-        transform: rotate(0deg);
-        transform-origin: top center;
-        z-index: 1000;
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(-128deg);
-            top: 500px;
-            left: 9%;
-        }
-
-    }
-
-    .arrow-6 {
-        width: 25px;
-        position: absolute;
-        top: 260px;
-        left: 423px;
-        transform: rotate(14deg);
-        transform-origin: top center;
-        z-index: 1000;
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(-167deg);
-            top: 532px;
-            left: 28%;
-        }
-    }
-
-    .arrow-7 {
-        width: 25px;
-        position: absolute;
-        top: 287px;
-        left: 473px;
-        transform: rotate(24deg);
-        transform-origin: top center;
-        z-index: 1000;
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(-180deg);
-            top: 565px;
-            left: 49%;
-        }
-    }
-
-    .arrow-8 {
-        width: 25px;
-        position: absolute;
-        top: 322px;
-        left: 575px;
-        transform: rotate(60deg);
-        transform-origin: top center;
-        z-index: 1000;
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(-192deg);
-            top: 532px;
-            left: 67%;
-        }
-
-    }
-
-    .arrow-9 {
-        width: 25px;
-        position: absolute;
-        top: 415px;
-        left: 632px;
-        transform: rotate(78deg);
-        transform-origin: top center;
-        z-index: 1000;
-        @media #{$xs} {
-            width: 12px;
-            transform: rotate(154deg);
-            top: 500px;
-            left: 86%;
-        }
-    }
-}
-
-.close-anatomy {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 30px;
-    height: 30px;
-
-    path {
-        fill: #fff;
-    }
-
-}
-
-// MENU ALL
-
-.menu-all {
-    overflow-y: scroll;
-    position: fixed;
-    top: -150%;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    padding-top: 0;
-    text-align: center;
-    background: #000;
-
-    .close {
-        width: 60px;
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 200;
-        cursor: pointer;
-
-        path {
-            fill: $mainBrandColor;
-        }
-    }
-
-    .logo {
-
-        z-index: 1000;
-        // position: absolute;
-        // left: 50%;
-        // margin-left: -100px;
-    }
-
-    h3 {
+      p {
         color: $mainBrandColor;
-        text-align: center;
-        margin: 50px 0;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
+        font-size: 1.2em;
+        list-style: none;
 
-
-    }
-
-    h4 {
-        color: $mainBrandColor;
-        font-family: $titleFont;
-        font-size: 2.4em;
-    }
-
-    .menu-image {
-        background: url('../img/bg_table.jpg') center bottom;
-        background-size: cover;
-        padding-top: 30px;
-        margin-top: 240px;
+      }
     }
 
 
-    .carousel-item {
-
-        img {
-            width: 50vw !important;
-            margin: 0 auto;
-            display: none;
-
-            @media #{$xs} {
-                width: 100% !important;
-            }
-        }
-
-        .menu-description {
-
-
-            padding: 0;
-            width: 60%;
-            margin: 0 auto 30px;
-
-            p {
-                color: $mainBrandColor;
-                font-size: 1.2em;
-                list-style: none;
-
-            }
-        }
-
-
-
-    }
-
+  }
 
 
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    bottom: initial !important;
-    top: 50vh !important;
+  bottom: initial !important;
+  top: 50vh !important;
 }
 
 /* --------------------------------- GALLERY -------------------------------- */
 
 .gallery {
-    width: 100vw;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
-    padding: 200px 0;
+  width: 100vw;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding: 200px 0;
 
-    @media #{$xs} {
-        width: 100%;
-        padding: 50px 0;
-    }
+  @media #{$xs} {
+    width: 100%;
+    padding: 50px 0;
+  }
 }
 
 .instagram-feed,
 .instagram-feedInverse {
-    .instagram_gallery {
-        width: 15500px;
+  .instagram_gallery {
+    width: 15500px;
 
-        position: relative;
+    position: relative;
 
-        img {
-            width: 300px;
-            margin-right: 10px;
-            transition: all 0.2s ease-in-out;
+    img {
+      width: 300px;
+      margin-right: 10px;
+      transition: all 0.2s ease-in-out;
 
-            &:hover {
-                transition: all 0.2s ease-in-out;
-                transform: scale(0.9);
-            }
-        }
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.9);
+      }
     }
+  }
 }
 
 .instagram-feedInverse {
-    margin-left: -13800px;
-    margin-top: 10px;
+  margin-left: -13800px;
+  margin-top: 10px;
 }
 
-.footer{
-    color: #111;
-    text-align: center;
-    position: relative;
-    height: 400px;
-    font-size: 0.8em;
-    background: rgb(226, 226, 226);
-    padding-top: 50px;
-     @media #{$xs}{
-        height: 300px;
-     }
-    p{
-        margin-bottom: 0;
-        font-weight: bold;
+.footer {
+  color: #111;
+  text-align: center;
+  position: relative;
+  height: 400px;
+  font-size: 0.8em;
+  background: rgb(226, 226, 226);
+  padding-top: 50px;
+  @media #{$xs}{
+    height: 300px;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  img.logo-footer {
+    width: 20%;
+    margin-top: -50px;
+    @media #{$xs}{
+      width: 40%;
+      margin-top: -50px;
     }
-    img.logo-footer{
-        width: 20%;
-        margin-top: -50px;
-         @media #{$xs}{
-            width: 40%;
-            margin-top: -50px;
-         }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 120px;
+    bottom: 20px;
+    @media #{$xs}{
+      left: 20px;
+      bottom: 20px;
     }
-    
-    ul{
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        right: 120px;
-        bottom: 20px;
-         @media #{$xs}{
-            left: 20px;
-            bottom: 20px;
-         }
-        
-        li{
-            list-style: none;
-            width: 60px;
-        }
+
+    li {
+      list-style: none;
+      width: 60px;
     }
+  }
+}
+
+.modal-team{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -200%;
+  left: 0;
+  background: rgba(1, 1, 1, 0.8);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a{
+    display: block;
+    width:50%;
+    @media #{$xs}{
+      width: 90%;
+    }
+  }
+  svg{
+    width: 60px;
+  }
+  path {
+    fill: #fff;
+  }
+  
+  img{
+      width: 100%
+     
+      
+  }
 }
